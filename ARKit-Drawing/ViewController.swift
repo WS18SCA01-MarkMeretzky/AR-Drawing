@@ -148,7 +148,7 @@ class ViewController: UIViewController, ARSCNViewDelegate {
             node.transform = SCNMatrix4(anchor.transform);
 
             let position: simd_float4 = match.worldTransform.columns.3;
-            node.position = SCNVector3(x: position.x, y: position.y, z: position.z);
+            node.position = SCNVector3(position.x, position.y, position.z);
             
             addNodeToSceneRoot(node);
             lastObjectPlacedPoint = point; //p. 524
